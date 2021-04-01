@@ -1,0 +1,55 @@
+
+
+.main {
+	background-image: url(../img/main-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 730px;
+	padding: 170px 0;
+	padding-top: 230px;
+
+	@media (max-width: 600px) {
+		padding-top: 190px;
+		height: 630px;
+	}
+}
+
+.main-slider {
+	position: relative;
+}
+
+
+.main-slider .slick-arrow {
+	background-color: #fff;
+}
+
+
+.main-slider .slick-arrow.slick-prev {
+	background: url(../img/arrow-right.svg) center no-repeat;
+
+
+}
+
+.main-slider .slick-arrow.slick-next {
+	background: url(../img/arrow-right.svg) center no-repeat;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-slider .slick-dots button {
+	background-color: #fff;
+}
+

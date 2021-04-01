@@ -1,0 +1,40 @@
+
+
+.work {
+	background-color: #EBEBEB;
+	padding-top: 100px;
+	padding-bottom: 200px;
+
+	@media (max-width: 600px) {
+		padding-top: 50px;
+	}
+}
+.work-slider {
+	position: relative;
+}
+
+.work-slider .slick-arrow.slick-prev {
+	right: 60px;
+	background: url(../img/blue-arrow.svg) center no-repeat;
+	transform: rotate(-180deg);
+
+
+}
+
+.work-slider .slick-arrow.slick-next {
+	right: 0px;
+	background: url(../img/blue-arrow.svg) center no-repeat;
+	
+}
+
+.work-slider .slick-dots {
+	@media (max-width: 550px) {
+		bottom: -160px;
+	}
+}
+
+.work-slider .slick-dots li {
+	@media (max-width: 550px) {
+		margin-right: 8px;
+	}
+}

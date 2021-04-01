@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@400;900&display=swap');
+
+
+$fw-300:300;
+$fw-400:400;
+$fw-900:900;
+
+$btn-bg: #005FA3;
+
+
+@mixin Merri {
+	font-family: 'Merriweather', serif;
+}
+
+
+
+
+
+/*Подключение внешних стилей*/
+@import "reset";
+@import "header";
+@import "main";
+@import "services";
+@import "about";
+@import "work";
+@import "reviews";
+@import "contacts";
+@import "footer";
+
+/*Подключение шрифтов*/
+
+
+
+
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	color: #000;
+
+	&.active {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	overflow: hidden;
+}
+
+section {
+	padding: 140px 0;
+
+	@media (max-width: 600px) {
+		padding: 50px 0;
+	}
+}
+
+.container {
+	max-width: 1130px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.main-title {
+	font-size: 48px;
+	color: #fff;
+	@include Merri;
+	font-weight: 700;
+	margin-bottom: 80px;
+	line-height: 69px;
+
+	@media (max-width: 600px) {
+		font-size: 26px;
+		line-height: 40px;
+		margin-bottom: 40px;
+	}	
+
+	span {
+		color: $btn-bg;
+	}
+	&--main {
+		line-height: 66px;
+
+		@media (max-width: 600px) {
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+
+	&--black {
+		color: #333333;
+	}
+}
+
+.main-btn {
+	max-width: 270px;
+	width: 100%;
+	a {
+		display: block;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: $fw-400;
+		color: #fff;
+		text-align: center;
+		background-color: $btn-bg;
+		padding: 19px 0;
+		transition: all .4s;
+		&:hover {
+			background-color: darken($btn-bg, 15%);
+		}
+	}
+
+	&--right {
+		margin: 0 0 0 auto;
+
+		@media (max-width: 500px) {
+			margin: 0 auto;
+		}
+	}
+}
+
+.main-subtitle {
+	color: #BDBDBD;
+	font-size: 24px;
+	line-height: 33px;
+	font-weight: $fw-900;
+	margin-bottom: 40px;
+
+	@media (max-width: 600px) {
+		margin-bottom: 15px;
+	}
+}
+
+
+/*настройки слайдера*/
+
+.slick-track {
+	display: flex;
+}
+
+.slick-list {
+	overflow: hidden;
+}
+
+
+.slick-arrow {
+	background-color: $btn-bg;
+	opacity: 0.8;
+	position: absolute;
+	bottom: -120px;
+	z-index: 3;
+	font-size: 0;
+	border: none;
+	width: 60px;
+	height: 60px;
+
+	&.slick-disabled {
+		opacity: 0.4;
+	}
+}
+
+.slick-arrow.slick-prev {
+	right: 60px;
+	transform: rotate(-180deg);
+	background: url(../img/blue-arrow.svg) center no-repeat;
+}
+.slick-arrow.slick-next {
+	right: 0;
+	background: url(../img/blue-arrow.svg) center no-repeat;
+}
+
+
+.slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: -120px;
+	left: 0;
+
+
+}
+
+.slick-dots li{
+	list-style: none;
+	margin-right: 40px;
+
+	@media (max-width: 500px) {
+		margin-right: 20px;
+	}
+}
+
+.slick-dots button {
+	background-color: $btn-bg;
+	opacity: 0.4;
+	font-size: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	opacity: 0.4;
+}
+.slick-dots li.slick-active button {
+	opacity: 1;
+}
